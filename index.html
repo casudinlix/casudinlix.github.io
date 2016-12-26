@@ -1,142 +1,387 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-
+  <head>
+    <!-- Required meta tags always come first -->
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <title>My Profile</title>
+    <title>Duddin</title>
+    <link rel="shortcut icon" href="img/favicon.ico">
 
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-<link rel="shortcut icon">
-    <!-- Custom CSS -->
-    <link href="css/landing-page.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700|Montserrat+Subrayada:700|Rubik+Mono+One" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
 
-    <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    <!--  Animation css & jquery -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
 
-</head>
+    <script type="text/javascript" src="jquery.min.js"></script>
 
-<body>
+    <link rel="stylesheet" href="jquery-ui.css">
+    <script src="jquery-ui.js"></script>
 
-    <!-- Navigation -->  
-    <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
-        <div class="container topnav">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                
+<!--
+  <script type="text/javascript" src="jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+  <link rel="stylesheet" href="jquery-ui-1.12.1.custom/jquery-ui.css">
+-->
+
+    <style type="text/css">
+
+        html, body{
+            padding: 0;
+            margin: 0;
+            height: 100%;
+            font-family: 'Droid Sans', sans-serif;
+            color: white;
+        }
+
+        body{
+            width: 100%;
+            overflow-x: hidden;
+        }
+
+        .navbar-nav{
+            margin-top: 14px;
+            height: 50px;
+        }
+
+        .navbar-brand{
+            align-items: center;
+        }
+
+        .nav-item:hover{
+            border-bottom: 5px solid #dbd9d9;
+        }
+
+        .nav-container{
+            vertical-align:middle;
+            border-bottom: 10px #db644c solid;
+            font-size: 130%;
+        }
+
+        #cover{
+            background: #F26F55 center center no-repeat;
+            background-size: cover;
+            color: white;
+            height: 85%;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            margin-top: 60px;
+        }
+
+        h1{
+            color: white;
+        }
+
+        #cover-caption{
+            width: 100%;
+        }
+
+        #changethewords{
+            width: 640px;
+            font-size: 150%;
+            text-align: left;
+            margin: 0 auto;
+        }
+
+        #fauzi{
+            text-shadow: 5px 5px 0px rgba(209,98,79,1);
+            color: white;
+            font-size: 80px;
+            font-family: 'Montserrat Subrayada', sans-serif;
+        }
+
+
+        .content-container{
+            text-align: center;
+            align-items: center;
+            background: #2B313D center center no-repeat;
+            background-size: cover;
+            height: 100%;
+            width: 100%;
+        }
+
+        .content-container-2{
+            text-align: center;
+            align-items: center;
+            background: #e0e0e0 center center no-repeat;
+            background-size: cover;
+            height: 120%;
+            width: 100%;
+        }
+
+        .hidden{
+             opacity:0;
+        }
+        .visible{
+             opacity:1;
+        }
+
+        #about, #work, #sayhi{
+            padding-top: 150px;
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+
+        #work-content{
+            color: #e0e0e0;
+            font-size: 140%
+        }
+
+        #work-content-neg{
+            color: #2B313D;
+            font-size: 140%;
+        }
+
+
+        #brand-icon-id{
+            display: none;
+        }
+
+        #nav-cover{
+
+        }
+
+        #mailto{
+            text-decoration: none;
+            color: #e0e0e0;
+        }
+
+        .soc{
+            margin: 0 50px;
+            border-radius: 50%;
+            width: 100px;
+
+        }
+
+        #sayhi{
+            margin-bottom: 100px;
+        }
+
+/*        waving hand*/
+        #hand {
+
+              margin-top: 150px;
+            margin-bottom: -50px;
+
+            -webkit-transform: rotate(-40deg);
+            -moz-transform: rotate(-40deg);
+            -o-transform: rotate(-40deg);
+            -ms-transform: rotate(-40deg);
+            transform: rotate(-40deg);
+            -webkit-animation: wink 0.5s alternate infinite; /* Safari 4+ */
+              -moz-animation:    wink 0.5s alternate infinite; /* Fx 5+ */
+              -o-animation:      wink 0.5s alternate infinite; /* Opera 12+ */
+              animation:         wink 0.5s alternate infinite; /* IE 10+, Fx 29+ */
+            -webkit-transform-origin: 50% 100%;
+            -moz-transform-origin: 50% 100%;
+            -o-transform-origin: 50% 100%;
+            -ms-transform-origin: 50% 100%;
+            transform-origin: 50% 100%;
+            -webkit-animation-timing-function: ease; /* Chrome, Safari, Opera */
+            animation-timing-function: ease;
+
+            }
+
+            /* Chrome, Safari, Opera */
+            @-webkit-keyframes wink {
+                0% {-webkit-transform: rotate(-40deg);
+            -moz-transform: rotate(-40deg);
+            -o-transform: rotate(-40deg);
+            -ms-transform: rotate(-40deg);
+
+            }
+
+            100% {-webkit-transform: rotate(40deg);
+            -moz-transform: rotate(40deg);
+            -o-transform: rotate(40deg);
+            -ms-transform: rotate(40deg);
+            transform: rotate(40deg);}
+
+            }
+
+            /* Standard syntax */
+            @keyframes wink {
+
+
+                0% {-webkit-transform: rotate(-40deg);
+            -moz-transform: rotate(-40deg);
+            -o-transform: rotate(-40deg);
+            -ms-transform: rotate(-40deg);
+            transform: rotate(-40deg);
+            }
+
+
+            100% {-webkit-transform: rotate(40deg);
+            -moz-transform: rotate(40deg);
+            -o-transform: rotate(40deg);
+            -ms-transform: rotate(40deg);
+            transform: rotate(40deg);}
+
+            }
+
+    </style>
+
+  </head>
+
+  <body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+
+        <nav class="navbar navbar-light pull-right navbar-fixed-top bg-faded">
+           <a id="brand-icon-id" class="navbar-brand post-brand" href="#nav-cover">
+                <img src="http://i.imgur.com/pfdQxlN.png" width="40" alt="">
+           </a>
+            <div class="nav navbar-nav">
+                <a class="nav-item nav-link" href="#about">ABOUT</a>
+                <a class="nav-item nav-link" href="#work">WORK</a>
+                <a class="nav-item nav-link" href="#bott">SAY HI!</a>
             </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="#about">About</a>
-                    </li>
-                    
-                    <li>
-                        <a href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
+        </nav>
 
 
-    <!-- Header -->
-    <a name="about"></a>
-    <div class="intro-header">
-        <div class="container">
-
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="intro-message">
-                        <h1>Casudin</h1>
-                        <h3><i class="fa fa-mail"></i>Casudin.c@linuxmail.org</h3>
-                        <h3><i class="fa fa-phone"></i>+6285311133392</h3>
-                        <hr class="intro-divider">
-                        <ul class="list-inline intro-social-buttons">
-                            <li>
-                                <a href="https://twitter.com/DuddinDudien" class="btn btn-default btn-lg" target="_blank"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
-                            </li>
-                            <li>
-                                <a href="https://github.com/casudinlix?tab=repositories" class="btn btn-default btn-lg" target="_blank"><i class="fa fa-github fa-fw"></i> <span class="network-name"> View My Project On Github</span></a>
-                            </li>
-                            <li>
-                                <a href="https://www.linkedin.com/in/casudin-ahi" class="btn btn-default btn-lg" target="_blank"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">Linkedin</span></a>
-                            </li>
-                        </ul>
+    <div id="cover">
+        <div id="cover-caption">
+            <div class="container">
+                <img src="http://i.imgur.com/pfdQxlN.png" width="200px" class="img-fluid animated infinite pulse" alt="Responsive image">
+                 <div class="col-sm-12 col-sm-offset-1">
+                    <h1 id="fauzi" class="animated bounceInDown">Duddin <span class="hidden-xs-down">Casudin</span></h1>
+<!--                    <p id="typing">Hi, welcome to my portofolio website.<span id="typing-span">|</span></p>-->
+                     <div class ="animated infinite pulse" id="changethewords">
+                        I love
+                        <span id="1" style="display: none"><strong>Code.</strong></span>
+                        <span id="2" style="display: none"><strong>Design.</strong></span>
+                        <span id="3" style="display: none"><strong>Developing.</strong></span>
+                        <span id="4" style="display: none"><strong>YOU!</strong></span>
+<!--                        <span class="hidden-sm-down" id="5" style="display: none">Yup, i'm a web <strong>developer</strong> &amp; <strong>designer</strong>.</span>-->
                     </div>
                 </div>
             </div>
-
         </div>
-        <!-- /.container -->
-
     </div>
-    <!-- /.intro-header -->
 
-    <!-- Page Content -->
-
-	
-        <!-- /.container -->
-
-    </div>
-    <!-- /.content-section-a -->
-
-   
-    <!-- Footer -->
-    <footer>
+    <div class="content-container">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <ul class="list-inline">
-                        <li>
-                            <a href="#">Home</a>
-                        </li>
-                        <li class="footer-menu-divider">&sdot;</li>
-                        <li>
-                            <a href="#about">About</a>
-                        </li>
-                        
-                        
-                        <li class="footer-menu-divider">&sdot;</li>
-                        <li>
-                            <a href="#contact">Contact</a>
-                        </li>
-                    </ul>
-                    <p class="copyright text-muted small">Copyright &copy; Casudin 2016. All Rights Reserved</p>
-                </div>
-            </div>
+            <h1 id="about" class="work-post" >Who am i?</h1>
+            <p id="work-content" class="work-content-post">Hi! My name is <u>Fauzi Arif Sanjaya</u>. A computer engineering student who's interested in web design &amp; development, design graphic and photography. I'm addicted to pizza and tea. And i love archery!</p>
         </div>
-    </footer>
+    </div>
 
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+    <div class="content-container-2">
+        <h1 id="work" class="work-post" style="color: #2B313D;">What do i do?</h1>
+        <p id="work-content-neg" class="work-content-post" >Front-End web development. Graphic design.</p>
+    </div>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+    <div class="content-container-2" id="bott" style="background-color:#2B313D;">
+       <img id="hand" src="https://dl.dropboxusercontent.com/u/18908834/hand.png" class="img-fluid" style="width:100px" alt="Responsive image">
+        <h1 id="sayhi" class="work-post" style="color: #e0e0e0;">To say hi, <u><strong><a id="mailto" href="mailto:fauziarifsanjaya@yahoo.com">Mail</a></strong></u> me!</h1>
+        <p id="work-content" class="work-content-post" ></p>
 
-</body>
+        <div class="container">
+            <a href="https://www.facebook.com/fauziarifs"><img src="http://i.imgur.com/L7R4j8G.png" class="img-fluid soc post" alt="Responsive image"></a>
+            <a href="https://twitter.com/areeveisme"><img src="http://i.imgur.com/N0mR293.png" class="img-fluid soc post" alt="Responsive image"></a>
+            <a href="https://www.instagram.com/fauzifilm/"><img src="http://i.imgur.com/Qnwu31u.png" class="img-fluid soc post" alt="Responsive image"></a>
+            <a href="https://github.com/fauzisan"><img src="http://i.imgur.com/nrdEncK.png" class="img-fluid soc post" alt="Responsive image"></a>
+        </div>
+    </div>
 
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js" integrity="sha384-XTs3FgkjiBgo8qjEjBk0tGmf3wPrWtA6coPfQDfFEY8AnYJwjalXCiosYRBIBZX8" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
+    <script src="viewportchecker.js"></script>
+
+
+    <script type="text/javascript">
+
+          $("#1").delay(1000).fadeIn(500, function(){
+              $(this).fadeOut(500, function(){
+                  $("#2").fadeIn(500, function(){
+                      $(this).fadeOut(500, function(){
+                          $("#3").fadeIn(500, function(){
+                             $(this).fadeOut(500, function(){
+                                 $("#4").fadeIn(500, function(){
+                                     $(this).delay(1000).fadeOut(500, function(){
+                                         $("#1").fadeIn(300, function(){
+                                             $("#5").fadeIn(500);
+                                         });
+                                     });
+                                 });
+                             }) ;
+                          });
+                      });
+                  });
+              });
+          });
+
+        jQuery(document).ready(function() {
+            jQuery(".post").addClass("hidden").viewportChecker({
+                classToAdd: "visible animated bounceInUp",
+                offset: 100
+               });
+        });
+
+
+        jQuery(document).ready(function() {
+            jQuery(".work-post").addClass("hidden").viewportChecker({
+                classToAdd: "visible animated bounceInUp",
+                offset: 100
+               });
+        });
+
+        jQuery(document).ready(function() {
+            jQuery(".work-content-post").addClass("hidden").viewportChecker({
+                classToAdd: "visible animated flipInX",
+                offset: 100
+               });
+        });
+
+
+        $(function() {
+
+          $(window).scroll(function() {
+            var x = $(window).scrollTop();
+
+            if (x >= $("#cover").height()) {
+              $("#brand-icon-id").fadeIn();
+            } else {
+              $("#brand-icon-id").fadeOut();
+            }
+
+          });
+
+        });
+
+       $(document).ready(function(){
+          // Add smooth scrolling to all links
+          $("a").on('click', function(event) {
+
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+              // Prevent default anchor click behavior
+              event.preventDefault();
+
+              // Store hash
+              var hash = this.hash;
+
+              // Using jQuery's animate() method to add smooth page scroll
+              // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+              $('html, body').animate({
+                scrollTop: $(hash).offset().top
+              }, 800, function(){
+
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+              });
+            } // End if
+
+          });
+        });
+
+    </script>
+
+  </body>
 </html>
